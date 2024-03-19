@@ -1,0 +1,16 @@
+{
+  "name": "friendsback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "showoff"
+  },
+  "author": "Dip Patel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
+  }
+}

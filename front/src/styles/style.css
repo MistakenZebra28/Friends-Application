@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --backdrop-color: rgb(72 72 72 / 79%);
+    --white-color: #ffffff;
+    --work-area-backcolor: #AFDBF5;
+    --light-border-color: #b9b9b9;
+    --titles-color: #00356B;
+    --attraction-color: #7B68EE;
+    --problem-color: #C21E56;
+    --attraction-color-pick: #7B68EE55;
+    --problem-color-pick: #C21E5655;
+
+}
+
+@font-face {
+    font-family: RethinkSans-Regular;
+    src: url("../fonts/RethinkSans-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: 'RethinkSans-Regular';
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px calc(100vh - 60px);
+    align-items: center;
+    justify-content: center;
+}
+
+.container>.title {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.container>.work-area {
+    width: clamp(300px, 90%, 1300px);
+    height: 100px;
+    justify-self: center;
+    align-self: self-start;
+    margin-top: 40px;
+}
+
+.container>.work-area>.friends-list-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    padding-bottom: 50px;
+}
+
+.container>.work-area>.friends-list-container>.friend-card {
+    padding: 30px 25px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px minmax(40px, max-content) 30px minmax(100px, max-content);
+    background-color: white;
+    border-radius: 10px;
+    width: 240px;
+}
+
+.container>.work-area>.friends-list-container>.friend-card>.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    width: 90%;
+    justify-self: center;
+}
+
+.container>.work-area>.friends-list-container>.friend-card>.profile>img {
+    width: auto;
+    height: 95px;
+}
+
+.container>.work-area>.friends-list-container>.friend-card>.name {
+    font-size: 28px;
+    justify-self: center;
+    padding: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.container>.work-area>.friends-list-container>.friend-card>.relation {
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 10px;
+    background-color: var(--attraction-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.container>.work-area>.friends-list-container>.friend-card>.note {
+    justify-self: center;
+    display: flex;
+    margin-top: 20px;
+    min-height: 50px;
+    background-color: #d9b6ff;
+    padding: 2px 15px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form {
+    background-color: white;
+    width: clamp(290px, 500px, 90%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+    padding: 40px 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 50px auto 0;
+}
+
+form>.title {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+form>.title::after {
+    content: '';
+    height: 1px;
+    background-color: var(--titles-color);
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 5px
+}
+
+form>.title>span {
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 19px;
+    color: var(--titles-color);
+}
+
+form>.control-container {
+    width: clamp(250px, 85%, 90%);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20px 40px max-content;
+    gap: 0px 0;
+    flex: 50px;
+}
+
+form>.control-container>label {
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 0;
+}
+
+form>.control-container>span {
+    color: var(--white-color);
+    font-size: 12px;
+    margin-top: -5px;
+    border-left: 1px solid var(--light-border-color);
+    border-bottom: 1px solid var(--light-border-color);
+    border-right: 1px solid var(--light-border-color);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding-left: 4px;
+}
+
+form>.control-container>span:empty {
+    display: none;
+}
+
+form>.control-container>.error {
+    background-color: var(--problem-color);
+
+}
+
+.buttons-holder {
+    display: flex;
+    gap: 35px 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.buttons-holder>.button>span {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--attraction-color);
+    color: white;
+    border-radius: 10px;
+}

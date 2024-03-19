@@ -1,6 +1,7 @@
 import React from 'react'
 import rd from 'react-dom/client'
-import H, { Header as He } from './Header';
+import Platform from './Platform';
+import './styles/style.css'
 
 const root = document.getElementById('root');
 
@@ -8,7 +9,6 @@ const root = document.getElementById('root');
 const reactObj = rd.createRoot(document.getElementById('root'))
 reactObj.render(
     <React.StrictMode>
-        <H></H>
-        <He></He>
+        <Platform></Platform>
     </React.StrictMode>,
 )
